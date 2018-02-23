@@ -1,0 +1,68 @@
+\documentclass[addpoints,answers]{exam}
+\usepackage{graphicx,wrapfig}
+\usepackage[letterpaper, margin=.85in]{geometry}
+
+\newcommand{\class}[1]{<++ CLASS ++>}
+\newcommand{\examtitle}[1]{<++ EXAM TITLE ++>}
+%{{{ options and new commands
+\pagestyle{headandfoot}
+\runningfootrule
+\lhead[\class p\\Dr. Taylor]{}
+\chead[\examtitle]{}
+\rhead[Spring 2018]{}
+\lfoot[]{\class}
+\cfoot[]{\examtitle}
+\rfoot[]{Page \thepage\ of \numpages}
+\noboxedpoints
+\pointsinmargin
+
+
+\newcommand{\vf}{\\\vspace{\fill}}
+\newcommand{\blank}{\line(1,0){100}}
+
+\newcommand{\imgqwide}[2]{	\begin{minipage}[t]{.65\textwidth}
+	#2
+	\end{minipage}
+    \begin{minipage}[t]{.35\textwidth}
+	    \vspace{0pt}
+	    \begin{flushright}   \includegraphics[width=\textwidth]{img/#1}\end{flushright}
+    \end{minipage}}
+\newcommand{\imgB}[1]{\includegraphics[width=2in]{img/#1}}
+\newcommand{\imgq}[2]{	\begin{minipage}[t]{.8\textwidth}
+	#2
+	\end{minipage}
+    \begin{minipage}[t]{.2\textwidth}
+	    \vspace{0pt}
+	    \begin{flushright}   \includegraphics[width=\textwidth]{img/#1}\end{flushright}
+    \end{minipage}}
+
+\newcommand{\imgqwider}[2]{	\begin{minipage}[t]{.5\textwidth}
+	#2
+	\end{minipage}
+    \begin{minipage}[t]{.5\textwidth}
+	    \vspace{0pt}
+	    \begin{flushright}   \includegraphics[width=\textwidth]{img/#1}\end{flushright}
+    \end{minipage}}
+    \newcommand{\honorcode}{\vspace{-.8cm}\noindent \textit{Honor Code}:\\[1.5cm] \_\hrulefill}
+\begin{document}
+
+\noindent\makebox[\textwidth]{Name:\hrulefill \hspace{1cm} Date:\blank \hspace{1cm}Score:\hspace{2cm}}
+\vspace{0.2in}
+%end new commands}}}
+
+% Reference:
+% \imgq{file in /img}{question text} Also, \imgqwide and \imgqwider follow same format
+% \honorcode to include space for it
+% \question[pts] to have a new question
+%
+
+\honorcode
+
+\begin{questions}
+	\question[10]\imgq{1}{text}
+	\question[10]\imgqwide{1}{text}
+	\question[10]\imgqwider{1}{text}
+
+
+\end{questions}
+\end{document} 
